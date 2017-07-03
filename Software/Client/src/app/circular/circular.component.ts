@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CircularComponent implements OnInit {
 
   public circularTxt="This is circular txt UI.";
+  title = 'Circular App!';
 
   public bikesList=['Hero spelender',
     'Honda shine',

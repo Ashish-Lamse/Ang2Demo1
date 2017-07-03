@@ -1,2 +1,21 @@
-<input type="text"/>
-<button>Search</button>
+<h1>
+  {{title}}!!
+</h1>
+<input type="text" (keyup)="onKeyUp($event)">
+<button (click)="getUsers()">Search</button>
+<p>{{searchCount}}</p>
+
+<ol *ngIf="searchResults">
+  <!--<li ></li>-->
+
+  <md-card class="user-card" *ngFor="let user of searchResults.items">
+    <md-card-header>
+      <div md-card-avatar class="example-header-image"></div>
+      <md-card-title>{{user.login}}</md-card-title>
+    </md-card-header>
+    <img class="profile-pic" md-card-image [src]="user.avatar_url">
+    <md-card-content>
+
+    </md-card-content>
+  </md-card>
+</ol>
